@@ -147,6 +147,17 @@
   <%= render "notices/form", notice: @notice %>
 </section>
 
+
+<section>
+  <% @universites.each do |university| %>
+    <%= university.name %></br>
+    (<% university.researchers.each do |researcher|%>
+      <%= researcher.name %>
+    <% end %>)</br>
+  <% end %>
+
+</section>
+
 <!-- Contact-->
 <section class="contact-section bg-black">
   <div class="container px-4 px-lg-5">
